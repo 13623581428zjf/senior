@@ -18,7 +18,7 @@ let rules = [
             {
                 loader: 'thread-loader',
                 options: {
-                    // 产生的 worker 的数量，默认是 cpu 的核心数
+                    // 产生的 worker 的数量，默认是 cpu 的核心数 
                     workers: 3,
                     // 一个 worker 进程中并行执行工作的数量
                     // 默认为 20
