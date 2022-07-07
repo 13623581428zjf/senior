@@ -1,47 +1,23 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-        <!-- 全局loading -->
-        {{this.pageLoading}}
-        <loading v-if="this.pageLoading"></loading>
-    </div>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import store from '@/store'
-import loading from '../src/views/loading/loading.vue'
 export default {
-    name: 'App',
-    components: {
-        loading
-    },
-    computed: {
-        pageLoading() {
-            return store.state.demo2.loading
-        }
-    },
-    data() {
-        return {}
-    },
-    created() {
-        if (!this.$isMobile()) {
-            document.body.style.maxWidth = '750px'
-            document.body.style.margin = '0 auto'
-        }
-    },
-    methods: {
-    }
+  name: 'App'
 }
 </script>
 
-<style lang="scss">
-html,body,#app{
-    width: 100%;
-}
+<style>
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-
 </style>
