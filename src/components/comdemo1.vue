@@ -1,18 +1,25 @@
 <template>
   <div>
-    1
+    <div class="son_container w100 ub ub-ac">
+      <div v-for="(item,index) in this.deData" :key="index">
+        <div>{{item.icc}}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'comdemo1',
-   props:{},
+   props:{
+    deData:{
+      type:Array,
+      default:null
+    }
+   },
     components: {},
     data() {
-        return {
-
-        }
+        return {}
     },
     filters:{},
     computed:{},
@@ -24,5 +31,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.son_container{
+  div{
+    margin-right: 30px;
+  }
+}
 </style>

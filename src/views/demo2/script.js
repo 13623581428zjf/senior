@@ -1,10 +1,13 @@
+import comdemo2 from '../../components/comdemo2'
 export default {
     name: 'demo1',
     props:{},
-    components: {},
+    components: {
+        comdemo2
+    },
     data() {
         return {
-
+            FaNum:0
         }
     },
     filters:{},
@@ -12,5 +15,14 @@ export default {
     created() {},
     mounted(){},
     beforeDestroy() {},
-    methods: {}
+    methods: {
+        refreshJaja(){
+            this.FaNum++
+        },
+        nextNode(){
+            this.$router.push({
+                name:'demo3'
+            })
+        }
+    }
 }

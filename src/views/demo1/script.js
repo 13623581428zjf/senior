@@ -1,10 +1,13 @@
+import datalist from './data.js'
+import comdemo1 from '../../components/comdemo1'
 export default {
     name: 'demo1',
-    props:{},
-    components: {},
+    components: {
+        comdemo1
+    },
     data() {
         return {
-
+            deData:datalist,
         }
     },
     filters:{},
@@ -12,5 +15,11 @@ export default {
     created() {},
     mounted(){},
     beforeDestroy() {},
-    methods: {}
+    methods: {
+        nextNode(){
+            this.$router.push({
+                name:'demo2'
+            })
+        }
+    }
 }

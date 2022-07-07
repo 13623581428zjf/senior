@@ -25,9 +25,17 @@ npm test
 
 #注释
 #componts:组件位：
-comdemo1:
+comdemo1:父传子
+comdemo2:子传父
+comdemo3: 父组件通过ref绑定获取子组件的值
+
+
+
 #路由：
-demo1：挖掘 更多更优组件传值
+demo1：父传子
+demo2:子传父
+demo3:父组件通过ref绑定获取子组件的值
+
 
 
 踩坑1：安装完脚手架后：node-sass  和   sass-loader  版本提高。需要重新安装低版本
