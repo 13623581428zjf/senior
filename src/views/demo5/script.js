@@ -15,11 +15,7 @@ export default {
     computed:{},
     created() {},
     mounted(){},
-    beforeDestroy() {
-        //移除所有监听事件
-        EventBus.$off('refeshEmitEventBus')
-        EventBus.$off('refesherouter')
-    },
+    beforeDestroy() {},
     methods: {
         clickevent(){
             EventBus.$emit('refeshEmitEventBus', this.msg)

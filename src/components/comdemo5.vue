@@ -16,6 +16,8 @@ export default {
     created() {},
     mounted(){
        this.$nextTick(()=>{
+           //移除所有监听事件
+            EventBus.$off('refeshEmitEventBus')
             EventBus.$on('refeshEmitEventBus',this.event1)
       })
     },

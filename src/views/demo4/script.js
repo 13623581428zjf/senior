@@ -12,6 +12,7 @@ export default {
     computed:{},
     created() {},
     mounted(){
+        //移除所有监听事件
         EventBus.$off('refesherouter')
         EventBus.$on('refesherouter',this.routerce)
     },
