@@ -11,7 +11,7 @@ export default [
   },
   {
     type:'isThree',
-    cid:3,
+    cid:4,
     icc:'mainF'
   }
 ]
