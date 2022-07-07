@@ -1,6 +1,6 @@
 import comdemo2 from '../../components/comdemo2'
 export default {
-    name: 'demo1',
+    name: 'demo2',
     props:{},
     components: {
         comdemo2

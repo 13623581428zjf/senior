@@ -1,6 +1,6 @@
 import comdemo3 from '../../components/comdemo3'
 export default {
-    name: 'demo1',
+    name: 'demo3',
     props:{},
     components: {
         comdemo3
@@ -19,5 +19,11 @@ export default {
         })
     },
     beforeDestroy() {},
-    methods: {}
+    methods: {
+        nextNode(){
+            this.$router.push({
+                name:'demo4'
+            })
+        }
+    }
 }
