@@ -3,6 +3,8 @@ import App from './App'
 import router from './router'
 import './assets/css/common.scss'
 import './assets/css/ub.scss'
+import './assets/css/LegionFont.scss'
+
 
 Vue.config.productionTip = false
 
