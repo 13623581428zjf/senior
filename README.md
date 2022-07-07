@@ -29,6 +29,7 @@ comdemo1:父传子
 comdemo2:子传父
 comdemo3: 父组件通过ref绑定获取子组件的值
 comdemo4: 字体自定义设置
+comdemo5: eventBus
 
 
 
@@ -38,6 +39,7 @@ demo1：父传子
 demo2:子传父
 demo3:父组件通过ref绑定获取子组件的值
 demo4:字体自定义配置
+demo5:eventBus
 
 
 

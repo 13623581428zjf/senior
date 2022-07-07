@@ -4,6 +4,7 @@ import demo1 from '@/views/demo1'
 import demo2 from '@/views/demo2'
 import demo3 from '@/views/demo3'
 import demo4 from '@/views/demo4'
+import demo5 from '@/views/demo5'
 
 
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/demo4',
       name: 'demo4',
       component: demo4
+    },
+    {
+      path: '/demo5',
+      name: 'demo5',
+      component: demo5
     }
   ]
 })

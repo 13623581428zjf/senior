@@ -1,5 +1,5 @@
 export default {
-    name: 'demo1',
+    name: 'demo7',
     props:{},
     components: {},
     data() {

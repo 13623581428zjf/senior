@@ -2,6 +2,7 @@
   <div>
     <div class="d1">123456789,</div>
     <p>123456789,</p>
+    <div class="next_node ub ub-pc ub-ac w100" @click="nextNode">下一节</div>
   </div>
 </template>
 <script src="./script.js"></script>
