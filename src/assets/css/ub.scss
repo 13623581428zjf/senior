@@ -1,0 +1,347 @@
+//编码格式
+@charset "utf-8";
+
+/*ub 定义盒子为弹性盒子*/
+.ub {
+	display: flex;
+	position: relative;
+}
+/*ub-ac 让子元素垂直方向居中*/
+.ub-ac {
+	align-items:center;
+}
+/*子元素反转*/
+.ub-rev {
+	box-direction: reverse;
+}
+
+/*子元素绝对定位*/
+.ub-con {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*ub-ae 让子元素垂直方向居底*/
+.ub-ae {
+	align-items:flex-end;
+}
+/*ub-pc 让子元素水平方向居中底*/
+.ub-pc {
+	justify-content:center;
+}
+/*ub-pe 让子元素水平方向居右*/
+.ub-pe {
+	justify-content:flex-end;
+}
+
+/*ub-pj 让子元素左右平均间隔*/
+.ub-pj {
+	justify-content:space-between;
+}
+/*ub-ver 让子元素纵向排列*/
+.ub-ver {
+	flex-direction:column;
+}
+
+.ub-f1 {
+	flex: 1;
+}
+
+.ub-f2 {
+	 flex: 2;
+}
+
+.ub-f3 {
+	flex: 3;
+}
+
+.ub-f4 {
+	flex: 4;
+}
+
+
+.line1 {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.line2 {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.line3 {
+	display: -webkit-box !important;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.w100 {
+	width: 100%;
+}
+.h100 {
+	height: 100%;
+}
+button{
+	outline: none;
+}
+// 边框样式
+$borderColor:#ccc;
+.border,
+.border-top,
+.border-right,
+.border-bottom,
+.border-left,
+.border-topbottom,
+.border-rightleft,
+.border-topleft,
+.border-rightbottom,
+.border-topright,
+.border-bottomleft {
+	position: relative;
+}
+
+.border::before,
+.border-top::before,
+.border-right::before,
+.border-bottom::before,
+.border-left::before,
+.border-topbottom::before,
+.border-topbottom::after,
+.border-rightleft::before,
+.border-rightleft::after,
+.border-topleft::before,
+.border-topleft::after,
+.border-rightbottom::before,
+.border-rightbottom::after,
+.border-topright::before,
+.border-topright::after,
+.border-bottomleft::before,
+.border-bottomleft::after {
+	content: "\0020";
+	/*overflow: hidden;*/
+	position: absolute;
+}
+
+
+/* border
+ * 因，边框是由伪元素区域遮盖在父级
+ * 故，子级若有交互，需要对子级设置
+ * 定位 及 z轴
+ */
+
+.border::before {
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border: 1PX solid $borderColor;
+	transform-origin: 0 0;
+}
+
+.border-top::before,
+.border-bottom::before,
+.border-topbottom::before,
+.border-topbottom::after,
+.border-topleft::before,
+.border-rightbottom::after,
+.border-topright::before,
+.border-bottomleft::before {
+	left: 0;
+	width: 100%;
+	height: 1PX;
+}
+
+.border-right::before,
+.border-left::before,
+.border-rightleft::before,
+.border-rightleft::after,
+.border-topleft::after,
+.border-rightbottom::before,
+.border-topright::after,
+.border-bottomleft::after {
+	top: 0;
+	width: 1PX;
+	height: 100%;
+}
+
+.border-top::before,
+.border-topbottom::before,
+.border-topleft::before,
+.border-topright::before {
+	border-top: 1PX solid $borderColor;
+	transform-origin: 0 0;
+}
+
+.border-right::before,
+.border-rightbottom::before,
+.border-rightleft::before,
+.border-topright::after {
+	border-right: 1PX solid $borderColor;
+	transform-origin: 100% 0;
+}
+
+.border-bottom::before,
+.border-topbottom::after,
+.border-rightbottom::after,
+.border-bottomleft::before {
+	border-bottom: 1PX solid $borderColor;
+	transform-origin: 0 100%;
+}
+
+.border-left::before,
+.border-topleft::after,
+.border-rightleft::after,
+.border-bottomleft::after {
+	border-left: 1PX solid $borderColor;
+	transform-origin: 0 0;
+}
+
+.border-top::before,
+.border-topbottom::before,
+.border-topleft::before,
+.border-topright::before {
+	top: 0;
+}
+
+.border-right::before,
+.border-rightleft::after,
+.border-rightbottom::before,
+.border-topright::after {
+	right: 0;
+}
+
+.border-bottom::before,
+.border-topbottom::after,
+.border-rightbottom::after,
+.border-bottomleft::after {
+	bottom: 0;
+}
+
+.border-left::before,
+.border-rightleft::before,
+.border-topleft::after,
+.border-bottomleft::before {
+	left: 0;
+}
+
+@media (max--moz-device-pixel-ratio: 1.49),
+(-webkit-max-device-pixel-ratio: 1.49),
+(max-device-pixel-ratio: 1.49),
+(max-resolution: 143dpi),
+(max-resolution: 1.49dppx) {
+	/* 默认值，无需重置 */
+}
+
+@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49),
+(-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49),
+(min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+(min-resolution: 144dpi) and (max-resolution: 239dpi),
+(min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+	.border::before {
+		width: 200%;
+		height: 200%;
+		transform: scale(.5);
+	}
+	.border-top::before,
+	.border-bottom::before,
+	.border-topbottom::before,
+	.border-topbottom::after,
+	.border-topleft::before,
+	.border-rightbottom::after,
+	.border-topright::before,
+	.border-bottomleft::before {
+		transform: scaleY(.5);
+	}
+	.border-ri  ght::before,
+	.border-left::before,
+	.border-rightleft::before,
+	.border-rightleft::after,
+	.border-topleft::after,
+	.border-rightbottom::before,
+	.border-topright::after,
+	.border-bottomleft::after {
+		transform: scaleX(.5);
+	}
+}
+
+@media (min--moz-device-pixel-ratio: 2.5),
+(-webkit-min-device-pixel-ratio: 2.5),
+(min-device-pixel-ratio: 2.5),
+(min-resolution: 240dpi),
+(min-resolution: 2.5dppx) {
+	.border::before {
+		width: 300%;
+		height: 300%;
+		transform: scale(.33333);
+	}
+	.border-top::before,
+	.border-bottom::before,
+	.border-topbottom::before,
+	.border-topbottom::after,
+	.border-topleft::before,
+	.border-rightbottom::after,
+	.border-topright::before,
+	.border-bottomleft::before {
+		transform: scaleY(.33333);
+	}
+	.border-right::before,
+	.border-left::before,
+	.border-rightleft::before,
+	.border-rightleft::after,
+	.border-topleft::after,
+	.border-rightbottom::before,
+	.border-topright::after,
+	.border-bottomleft::after {
+		transform: scaleX(.33333);
+	}
+}
+
+.border-round {
+	position: relative;
+}
+
+.border-round:after {
+	content: "";
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1PX solid $borderColor;
+	border-radius: 6PX;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	transform: scale(.5);
+}
+@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49),
+(-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49),
+(min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+(min-resolution: 144dpi) and (max-resolution: 239dpi),
+(min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+	.border-round::after {
+		width: 200%;
+		height: 200%;
+		transform: scale(.5);
+	}
+}
+@media (min--moz-device-pixel-ratio: 2.5),
+(-webkit-min-device-pixel-ratio: 2.5),
+(min-device-pixel-ratio: 2.5),
+(min-resolution: 240dpi),
+(min-resolution: 2.5dppx) {
+	.border-round::after {
+		width: 300%;
+		height: 300%;
+		transform: scale(.33333);
+	}
+}
+
+
+

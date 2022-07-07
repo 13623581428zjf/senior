@@ -1,0 +1,23 @@
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,li,dt,dd,th,td,button,input,form,img,span,div{ padding: 0; margin: 0; box-sizing: border-box;}
+html,body{font:14px/1.5 "Microsoft Yahei","\5FAE\8F6F\96C5\9ED1",arial,sans-serif;-webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased;}
+html *{ -webkit-tap-highlight-color: transparent; box-sizing: border-box}
+a{ text-decoration: none;}
+a:hover{ color: #000}
+img{ border: 0; vertical-align: middle}
+ul,ol,li{ list-style: none;}
+i,em{ font-style: normal }
+table{ border-spacing: initial; border-collapse: collapse;}
+button,input[type=text],input[type=password],select,textarea{ box-sizing: border-box; -webkit-appearance: none;}
+img{ vertical-align: top }
+
+//新增手机端适配
+
+@media screen and (max-width: 750px) {
+  html{
+    font-size: calc(100vw / 7.5);
+  }
+  html,body{
+    background: #fff;
+    color:#000;
+  }
+  }
