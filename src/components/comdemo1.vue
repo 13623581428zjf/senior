@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import store from '../../src/store'
 export default {
   name: 'comdemo1',
    props:{

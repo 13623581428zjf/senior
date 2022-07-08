@@ -11,7 +11,11 @@ export default {
     },
     filters:{},
     computed:{},
-    created() {},
+    created() {
+        setTimeout(()=>{
+            this.$store.dispatch('loadingPage',{ loadinPage:false , type1 :0, type2 :0 , loadingText:'加载中...'})
+        },200)
+    },
     mounted(){
         //获取子组件的数据 一定要等子组件页面渲染完成
         this.$nextTick(()=>{
