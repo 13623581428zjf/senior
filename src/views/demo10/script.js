@@ -35,6 +35,11 @@ export default {
         jl:VueDebounce('jlFun',1000),
         jlFun(){
             console.log('点击了节流')//在一定的时间内只执行最后一次
-        }
+        },
+        nextNode(){
+            this.$router.push({
+                name:'demo11'
+            })
+        },
     }
 }
