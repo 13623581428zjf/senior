@@ -14,7 +14,13 @@ export default {
             this.$store.dispatch('loadingPage',{ loadinPage:false , type1 :0, type2 :0 , loadingText:'加载中...'})
         },200)
     },
-    mounted(){},
+    mounted(){
+        //点击body触发的动作
+        document.body.addEventListener('click', () => {
+            // this.$parent.Isshow = false
+            //点击body要做的事情
+        })
+    },
     beforeDestroy() {},
     methods: {
         //swich
@@ -27,8 +33,8 @@ export default {
                     this.$router.push('./agenda')
                     break
                 case 'SignIn':
-                    if (this.info.status) { // status===1未签到
-                        if (this.checkTime()) { // 到签到时间了
+                    if (this.info.status) {
+                        if (this.checkTime()) {
                             this.$router.push({
                                 name: 'SignIn'
                             })
@@ -55,6 +61,11 @@ export default {
                     reject(e)
                 })
             })
-        }
+        },
+        nextNode(){
+            this.$router.push({
+                name:'demo9'
+            })
+        },
     }
 }

@@ -32,7 +32,10 @@ comdemo4: 字体自定义设置
 comdemo5: eventBus
 comdemo6: 全局loading
 comdemo7: 定时器
-comdemo8: swich/async await
+comdemo8: swich/async await/点击body触发的动作
+comdemo9: 数组方法
+comdemo10: 防抖
+
 
 
 
@@ -45,7 +48,10 @@ demo4:字体自定义配置
 demo5:eventBus
 demo6:全局loading
 demo6:定时器
-comdemo8: swich/async await
+comdemo8: swich/async await/点击body触发的动作
+comdemo9: 数组方法
+comdemo10: 防抖
+
 
 
 

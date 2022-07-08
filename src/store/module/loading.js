@@ -16,7 +16,6 @@ const loading = {
     },
     actions: {
       loadingPage( {commit} , obj ){
-          console.log(obj,'传给store的数据')
           commit( 'SET_lOADING', obj )
       }
     }
