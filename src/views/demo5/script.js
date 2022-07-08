@@ -24,6 +24,11 @@ export default {
         clickevent(){
             EventBus.$emit('refeshEmitEventBus', this.msg)
             EventBus.$emit('refesherouter')
-        }
+        },
+        nextNode(){
+            this.$router.push({
+                name:'demo7'
+            })
+        },
     }
 }

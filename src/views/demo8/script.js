@@ -16,5 +16,45 @@ export default {
     },
     mounted(){},
     beforeDestroy() {},
-    methods: {}
+    methods: {
+        //swich
+        listType(type) {
+            switch (type) {
+                case 'publicWelfare':
+                    this.$router.push('./publicWelfare')
+                    break
+                case 'agenda':
+                    this.$router.push('./agenda')
+                    break
+                case 'SignIn':
+                    if (this.info.status) { // status===1未签到
+                        if (this.checkTime()) { // 到签到时间了
+                            this.$router.push({
+                                name: 'SignIn'
+                            })
+                            this.$setsessionStorage('isLook', false)
+                        }
+                    } else {
+                        this.$router.push({
+                            name: 'SignIn'
+                        })
+                    }
+                    break
+            }
+        },
+        //async,await
+        async get1() {
+            let d = await this.get2()
+            console.log('d', d)
+        },
+        get2(){
+            return new Promise((resolve, reject) => {
+                feedback({}).then(res => {
+                    resolve(res)
+                }).catch(e => {
+                    reject(e)
+                })
+            })
+        }
+    }
 }
