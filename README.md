@@ -34,7 +34,7 @@ comdemo6: 全局loading
 comdemo7: 定时器
 comdemo8: swich/async await/点击body触发的动作
 comdemo9: 数组方法
-comdemo10: 防抖
+comdemo10: 公共方法
 
 
 
@@ -50,7 +50,7 @@ demo6:全局loading
 demo6:定时器
 comdemo8: swich/async await/点击body触发的动作
 comdemo9: 数组方法
-comdemo10: 防抖
+comdemo10: 公共方法
 
 
 

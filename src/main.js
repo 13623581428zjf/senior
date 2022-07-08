@@ -7,7 +7,6 @@ import './assets/css/common.scss'
 import './assets/css/ub.scss'
 import './assets/css/LegionFont.scss'
 
-
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

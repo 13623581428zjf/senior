@@ -24,9 +24,7 @@ export default {
       return store.state.loading.loadinPage
     }
   },
-  created(){
-
-  },
+  created(){},
   methods:{
 
   }
