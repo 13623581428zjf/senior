@@ -43,6 +43,13 @@ export default {
                   console.log('objw没有变化')
                 }
               },
+        },
+        '$route': {
+          handler: function(newVal) {
+            console.log('路由发生变化了', newVal)
+          },
+          deep: true, // 深度监听
+          immediate: true // 第一次初始化渲染就可以监听到
         }
     },
     computed:{},

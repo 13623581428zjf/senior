@@ -113,6 +113,64 @@ export default {
              })
              obj.select = vals.join('#')
         },
+        // 过滤所需数据
+        h(){
+            const freeExpireGame = this.lxgameList.filter(item => item.free_expire > 0 && item.free_expire > packageType.nowtime)
+        },
+        //  遍历  返回true  和 false
+        g(){
+            freeExpireGame.some(_item => Number(_item.game_id) === Number(item.gameId))
+        },
+        //先some条件循环，再filter过滤 所需item，最后插入新的数据
+        i(){
+            if (freeExpireGame.some(_item => Number(_item.game_id) === Number(item.gameId))) {
+                const cur = freeExpireGame.filter(_item => Number(_item.game_id) === Number(item.gameId))[0]
+                item.free_expire = cur.free_expire
+                item.nowtime = packageType.nowtime
+              } else {
+                item.free_expire = 0
+              }
+        },
+        //map 遍历
+        j(){
+            this.serveList = this.serveList.map((_item, _index) => {
+                if (_index === 0) {
+                  _item.isActive = true
+                } else {
+                  _item.isActive = false
+                }
+                return _item
+              })
+        },
+         //分享过得不被再分享
+        k(){
+           if (res && res.some(_item => _item.gameConfigId === this.routingParameters.gameConfigId)) {
+            this.$message({
+              message: '您已经分享过了哦！',
+              type: 'warning',
+              duration: 2500,
+              customClass: 'lg-message--warning'
+            })
+            return
+          } else {}
+        },
+        //查询点赞状态
+        l(){
+            const hotConfigId = JSON.parse(this.$route.query.item).hotConfigId
+            this.$store.dispatch('getqueryMode', this.user.userInfo.UserID).then((res) => {
+                if (res.praiseIds && res.praiseIds.some(_item => _item === hotConfigId)) {
+                   this.zanShow = 2
+                  } else {
+                    this.zanShow = 1
+                  }
+            })
+        },
+        m(){
+
+        },
+        n(){
+
+        },
         nextNode(){
             this.$router.push({
                 name:'demo10'

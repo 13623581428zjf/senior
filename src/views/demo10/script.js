@@ -1,15 +1,35 @@
 import { setlocalStorage , removelocalStorage , getlocalStorage , setsessionStorage , getsessionStorage , removesessionStorage , VueThrottle , VueDebounce} from '../../plugin/common'
+//  解决页面  计算数值 一闪
+function isNaN(val) {
+    // eslint-disable-next-line no-self-compare
+    if (val !== val) {
+      return true
+    }
+    return false
+  }
+  function getTooltipVal(val) {
+    if (val === '-' || isNaN(val)) {
+      return 0
+    } else {
+      return val
+    }
+  }
 export default {
     name: 'demo10',
     props:{},
     components: {},
     data() {
         return {
-
+            num1:100,
+            num2:1000
         }
     },
     filters:{},
-    computed:{},
+    computed:{
+        isNan(){
+            return getTooltipVal((this.num2 - this.num1)/100)
+        }
+    },
     created() {
         setTimeout(()=>{
             this.$store.dispatch('loadingPage',{ loadinPage:false , type1 :0, type2 :0 , loadingText:'加载中...'})
