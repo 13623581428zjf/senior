@@ -8,6 +8,7 @@
 <script>
 import store from '../src/store'
 import loadingPage from '../../myproject/src/components/comdemo6.vue'
+import { getTime } from '../src/api/demo1'
 export default {
   name: 'App',
   components:{
@@ -24,9 +25,17 @@ export default {
       return store.state.loading.loadinPage
     }
   },
-  created(){},
+  created(){
+    this.aa()
+  },
   methods:{
-
+    aa(){
+      getTime().then(res => {
+        console.log(res,'res')
+        }).catch(e => {
+         console.log(e)
+       })
+    }
   }
 
 }
