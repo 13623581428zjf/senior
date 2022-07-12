@@ -73,6 +73,11 @@ export default {
           ad:1
         }
         getmoni(obj)
-      }
+      },
+      nextNode(){
+        this.$router.push({
+            name:'demo12'
+        })
+    },
     }
 }

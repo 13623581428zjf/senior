@@ -25,17 +25,19 @@ npm test
 
 #注释
 #componts:组件位：
-comdemo1:父传子
-comdemo2:子传父
-comdemo3: 父组件通过ref绑定获取子组件的值
-comdemo4: 字体自定义设置
-comdemo5: eventBus
-comdemo6: 全局loading
-comdemo7: 定时器
-comdemo8: swich/async await + 点击body触发的动作
-comdemo9: 数组方法
+comdemo1:  父传子
+comdemo2:  子传父
+comdemo3:  父组件通过ref绑定获取子组件的值
+comdemo4:  字体自定义设置
+comdemo5:  eventBus
+comdemo6:  全局loading
+comdemo7:  定时器
+comdemo8:  swich/async await + 点击body触发的动作
+comdemo9:  数组方法
 comdemo10: 公共方法  + common.js + 页面计算数值一闪
 comdemo11: watcher监听
+comdemo12: vue-x深化 + store
+
 
 
 
@@ -45,16 +47,17 @@ comdemo11: watcher监听
 
 #路由：
 demo1：父传子
-demo2:子传父
-demo3:父组件通过ref绑定获取子组件的值
-demo4:字体自定义配置
-demo5:eventBus
-demo6:全局loading
-demo6:定时器
+demo2: 子传父
+demo3: 父组件通过ref绑定获取子组件的值
+demo4: 字体自定义配置
+demo5: eventBus
+demo6: 全局loading
+demo6: 定时器
 demo8: swich/async await + 点击body触发的动作
 demo9: 数组方法
-demo10: 公共方法  +  common.js + 页面计算数值一闪
+demo10:公共方法  +  common.js + 页面计算数值一闪
 demo11: watcher监听  +  路由监听
+demo12: vue-x深化 + store
 
 
 
