@@ -389,3 +389,7 @@ export const uuid = function(len, radix) {
   }
   return uuid.join('');
 }
+export const getmoni = (data) =>{
+  if (data.name === '111') data.name = '修改了' 
+  console.log(data,'测试公共传值')
+}  

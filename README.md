@@ -34,9 +34,9 @@ comdemo6: 全局loading
 comdemo7: 定时器
 comdemo8: swich/async await + 点击body触发的动作
 comdemo9: 数组方法
-comdemo10: 公共方法
+comdemo10: 公共方法  + common.js + 页面计算数值一闪
 comdemo11: watcher监听
-comdemo12:全局filter封装
+
 
 
 
@@ -53,9 +53,9 @@ demo6:全局loading
 demo6:定时器
 demo8: swich/async await + 点击body触发的动作
 demo9: 数组方法
-demo10: 公共方法  +  common.js
+demo10: 公共方法  +  common.js + 页面计算数值一闪
 demo11: watcher监听  +  路由监听
-demo12:全局filter封装
+
 
 
 

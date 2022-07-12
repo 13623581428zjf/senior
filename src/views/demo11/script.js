@@ -1,3 +1,4 @@
+import { getmoni } from '../../plugin/common'
 export default {
     name: 'demo11',
     props:{},
@@ -54,6 +55,7 @@ export default {
     },
     computed:{},
     created() {
+      this.getmoniFun()
         setTimeout(()=>{
             this.$store.dispatch('loadingPage',{ loadinPage:false , type1 :0, type2 :0 , loadingText:'加载中...'})
         },200)
@@ -63,5 +65,14 @@ export default {
     },
     mounted(){},
     beforeDestroy() {},
-    methods: {}
+    methods: {
+      //模拟公共方法传值
+      getmoniFun(){
+        let obj = {
+          name:'111',
+          ad:1
+        }
+        getmoni(obj)
+      }
+    }
 }
